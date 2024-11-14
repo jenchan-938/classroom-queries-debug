@@ -19,13 +19,14 @@ Rails.application.routes.draw do
   #------------------------------
   # Course routes
 
+  get("/insert_course", { :controller => "courses", :action => "create" })
+
   get("/courses", { :controller => "courses", :action => "index" })
   
   get("/courses/:path_id", { :controller => "courses", :action => "show" })
 
-  post("/insert_course", { :controller => "courses", :action => "create" })
 
-  get("/courses", { :controller => "courses_controller", :action => "index" }) #can you have two?
+  get("/courses", { :controller => "courses", :action => "index" }) #can you have two?
   
   get("/modify_course/:path_id", { :controller => "courses", :action => "update" })
 
