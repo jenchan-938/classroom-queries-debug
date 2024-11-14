@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   #------------------------------
   # Course routes
 
-  get("/insert_course", { :controller => "courses", :action => "create" })
+  post("/insert_course", { :controller => "courses", :action => "create" })
 
   get("/courses", { :controller => "courses", :action => "index" })
   
