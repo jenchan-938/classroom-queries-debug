@@ -14,7 +14,7 @@ class CoursesController < ApplicationController
 
   def create
     @course = Course.new
-    @course.title = params.fetch("qt")
+    @course.title = params.fetch("qt") #
     @course.term_offered = params.fetch("query_term")
     @course.department_id = params.fetch("query_department_id")
 
