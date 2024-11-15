@@ -28,7 +28,7 @@ Rails.application.routes.draw do
 
   get("/courses", { :controller => "courses", :action => "index" }) #can you have two?
   
-  get("/modify_course/:path_id", { :controller => "courses", :action => "update" })
+  post("/modify_course/:path_id", { :controller => "courses", :action => "update" })
 
   get("/delete_course/:path_id", { :controller => "courses", :action => "destroy" })
 
