@@ -95,7 +95,7 @@
 
 <h2>Roster</h2>
 <ul>
-  <% sEnrollment.where({ :course_id => @course.id }).each do |enrollment| %>
+  <% Enrollment.where({ :course_id => @course.id }).each do |enrollment| %>
     <% student = Student.where({ :id => enrollment.student_id }).at(0) %>
     <li>
       <a href="/students/<%= student.id %>">
